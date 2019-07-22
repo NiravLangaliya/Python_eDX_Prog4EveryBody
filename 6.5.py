@@ -3,6 +3,8 @@
 to extract the number at the end of the line below.
 Convert the extracted value to a floating point number and print it out.
 """
+import re
 text = "X-DSPAM-Confidence:    0.8475";
-
-text_new = text.find('0.8475')
+text_new = text.find(':')
+text_answer = float(str(text[text_new+1:]))
+print(text_answer)

@@ -10,8 +10,8 @@ when you are testing below enter mbox-short.txt as the file name.
 """
 # Use the file name mbox-short.txt as the file name
 import re
-fname = input("Enter file name: ")
-#fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
+#fname = input("Enter file name: ")
+fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
 fh = open(fname)
 decimal_value_list=[]
 total_decimal_value = 0.0
