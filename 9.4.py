@@ -7,17 +7,20 @@ they appear in the file. After the dictionary is produced, the program reads thr
 loop to find the most prolific committer.
 """
 import re
-#fname = input("Enter file name: ")
-fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
+fname = input("Enter file name: ")
+#fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
 fh = open(fname)
 words_list={}
 for line in fh:
-    if re.match("^From",line.rstrip()):
-        if words_list[re.split(' ',line.rstrip())[1]]
-            words_list[re.split(' ',line.rstrip())[1]]=re.split(' ',line.rstrip())[1]+1
+    if re.match("^From ",line.rstrip()):
+        if  words_list.has_key(re.split(' ',line.rstrip())[1]):
+            words_list[re.split(' ', line.rstrip())[1]] = words_list[re.split(' ', line.rstrip())[1]] + 1
         else:
-            words_list[re.split(' ',line.rstrip())[1]]
-
-for k,v in word_list():
-    print (k,v)
+            words_list[re.split(' ', line.rstrip())[1]]=int(1)
+maximum_number=0
+for key,value in words_list.items():
+    if maximum_number < value:
+        maximum_number = value
+        profile_committer=key
+print(profile_committer,maximum_number)
 fh.close()
