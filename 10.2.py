@@ -10,9 +10,14 @@ import re
 #fname = input("Enter file name: ")
 fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
 fh = open(fname)
-
+time_dict=dict()
 for line in fh:
     line = line.rstrip()
     if re.match("^From ",line):
-        time_str = re.findall('dd\:dd\:dd',line)
-        print(time_str)
+        time_str = str(re.split(':',re.findall('\d{2}:\d{2}:\d{2}',line)[0])[0])
+        if time_dict.has_key(time_str):
+            time_dict[time_str]=time_dict[time_str]+1
+        else:
+            time_dict[time_str]=1
+for key_element in sorted(time_dict.keys()):
+    print (key_element,time_dict[key_element])

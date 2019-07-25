@@ -10,7 +10,7 @@ import re
 fname = input("Enter file name: ")
 #fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
 fh = open(fname)
-words_list={}
+words_list=dict()
 for line in fh:
     if re.match("^From ",line.rstrip()):
         if  words_list.has_key(re.split(' ',line.rstrip())[1]):
