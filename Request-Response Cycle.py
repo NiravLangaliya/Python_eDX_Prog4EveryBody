@@ -12,3 +12,5 @@ while True:
     print(data.decode())
 
 mysock.close()
+sdfsdf
+zxfdsfs
