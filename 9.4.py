@@ -8,7 +8,7 @@ loop to find the most prolific committer.
 """
 import re
 fname = input("Enter file name: ")
-if len(name) < 1 :
+if len(fname) < 1 :
     fname = "mbox-short.txt"
 fh = open(fname)
 words_list=dict()
