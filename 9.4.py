@@ -8,7 +8,8 @@ loop to find the most prolific committer.
 """
 import re
 fname = input("Enter file name: ")
-#fname = "/Users/nlangaliya/Documents/GitHub/Python_eDX_Prog4EveryBody/mbox-short.txt"
+if len(name) < 1 :
+    fname = "mbox-short.txt"
 fh = open(fname)
 words_list=dict()
 for line in fh:
